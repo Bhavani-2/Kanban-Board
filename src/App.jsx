@@ -1,4 +1,4 @@
-import {Switch, Route, BrowserRouter} from 'react-router-dom'
+import {Switch, Route, BrowserRouter, Redirect} from 'react-router-dom'
 import Login from './component/Login'
 import Board from './component/Board'
 
@@ -8,6 +8,7 @@ const App = () => {
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route exact path="/board" component={Board} />
+         <Redirect exact from="/" to="/login" />
       </Switch>
     </BrowserRouter>
   )
